@@ -37,8 +37,3 @@ torch.save(pytorch_model, 'face_recognition_model.t7')
 
 
 
-'''# Save only the state dictionary
-torch.save(pytorch_model.state_dict(), 'trained_weights.pth')
-pytorch_model.load_state_dict(torch.load('trained_weights.pth'))
-
-torch.save(pytorch_model, 'face_recognition_model.pt')'''
