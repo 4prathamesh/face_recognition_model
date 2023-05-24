@@ -6,11 +6,14 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import roc_curve, auc
 from keras.utils import to_categorical
 from sklearn.svm import SVC
+from keras.models import load_model
+
+best_model = load_model('models/best_model.h5')
 
 dir_path = os.path.abspath('data')
 
 # Load the best trained model
-best_model = tf.keras.models.load_model('best_model.h5')
+#best_model = tf.keras.models.load_model('best_model.h5')
 
 # Load the test data
 X_test = np.load(os.path.join(dir_path, 'X.npy'), allow_pickle=True)
